@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Modern Student Registration Form</title>
+
+<style>
+
+/* =========================
+   GLOBAL STYLE
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+
+    /* NEW BIG COLORFUL BACKGROUND */
+
+    background: linear-gradient(
+    135deg,
+    #0f2027,
+    #203a43,
+    #2c5364,
+    #4e54c8,
+    #8f94fb
+    );
+
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+
+.container{
+
+    width:850px;
+
+    background: rgba(255,255,255,0.15);
+
+    backdrop-filter: blur(12px);
+
+    border:1px solid rgba(255,255,255,0.2);
+
+    border-radius:25px;
+
+    padding:40px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,0.4);
+
+    color:white;
+}
+
+/* =========================
+   TITLE
+========================= */
+
+.title{
+
+    text-align:center;
+
+    margin-bottom:40px;
+}
+
+.title h1{
+
+    font-size:45px;
+
+    letter-spacing:2px;
+
+    margin-bottom:10px;
+}
+
+.title p{
+
+    font-size:18px;
+
+    color:#e0e0e0;
+}
+
+/* =========================
+   FORM STYLE
+========================= */
+
+form{
+
+    width:100%;
+}
+
+.form-group{
+
+    display:flex;
+
+    align-items:center;
+
+    margin-bottom:25px;
+}
+
+.form-group label{
+
+    width:220px;
+
+    font-size:20px;
+
+    font-weight:bold;
+}
+
+/* =========================
+   INPUT STYLE
+========================= */
+
+.form-group input,
+.form-group select,
+.form-group textarea{
+
+    width:100%;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:12px;
+
+    outline:none;
+
+    font-size:16px;
+
+    background: rgba(255,255,255,0.92);
+
+    transition:0.3s;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus{
+
+    transform:scale(1.02);
+
+    box-shadow:0 0 15px rgba(255,255,255,0.8);
+}
+
+/* =========================
+   NAME BOX
+========================= */
+
+.name-box{
+
+    display:flex;
+
+    gap:15px;
+
+    width:100%;
+}
+
+.small-input{
+
+    width:100px !important;
+}
+
+/* =========================
+   RADIO & CHECKBOX
+========================= */
+
+.radio-group,
+.checkbox-group{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:20px;
+
+    font-size:18px;
+}
+
+.radio-group label,
+.checkbox-group label{
+
+    width:auto;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    font-weight:normal;
+}
+
+/* =========================
+   TEXTAREA
+========================= */
+
+textarea{
+
+    resize:none;
+
+    height:120px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn{
+
+    text-align:center;
+
+    margin-top:35px;
+}
+
+button{
+
+    padding:15px 40px;
+
+    border:none;
+
+    border-radius:50px;
+
+    font-size:20px;
+
+    font-weight:bold;
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:0.4s;
+
+    background: linear-gradient(
+    45deg,
+    #ff416c,
+    #ff4b2b
+    );
+}
+
+button:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 10px 20px rgba(0,0,0,0.4);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer{
+
+    text-align:center;
+
+    margin-top:30px;
+
+    color:#ddd;
+
+    font-size:15px;
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width:768px){
+
+    .container{
+
+        width:100%;
+
+        padding:25px;
+    }
+
+    .form-group{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .form-group label{
+
+        width:100%;
+
+        margin-bottom:10px;
+    }
+
+    .name-box{
+
+        flex-direction:column;
+    }
+
+    .title h1{
+
+        font-size:35px;
+    }
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- TITLE -->
+
+    <div class="title">
+
+        <h1>Student Registration Form</h1>
+
+        <p>Fill all information carefully</p>
+
+    </div>
+
+    <!-- FORM START -->
+
+    <form>
+
+        <!-- ROLL -->
+
+        <div class="form-group">
+
+            <label>Roll Number :</label>
+
+            <input type="number" placeholder="Enter Roll Number">
+
+        </div>
+
+        <!-- NAME -->
+
+        <div class="form-group">
+
+            <label>Student Name :</label>
+
+            <div class="name-box">
+
+                <input type="text" placeholder="First Name">
+
+                <input type="text" placeholder="Last Name">
+
+            </div>
+
+        </div>
+
+        <!-- FATHER -->
+
+        <div class="form-group">
+
+            <label>Father's Name :</label>
+
+            <input type="text" placeholder="Enter Father's Name">
+
+        </div>
+
+        <!-- MOTHER -->
+
+        <div class="form-group">
+
+            <label>Mother's Name :</label>
+
+            <input type="text" placeholder="Enter Mother's Name">
+
+        </div>
+
+        <!-- DOB -->
+
+        <div class="form-group">
+
+            <label>Date of Birth :</label>
+
+            <div class="name-box">
+
+                <input class="small-input" type="text" placeholder="DD">
+
+                <input class="small-input" type="text" placeholder="MM">
+
+                <input class="small-input" type="text" placeholder="YYYY">
+
+            </div>
+
+        </div>
+
+        <!-- MOBILE -->
+
+        <div class="form-group">
+
+            <label>Mobile Number :</label>
+
+            <div class="name-box">
+
+                <input class="small-input" type="text" value="+880">
+
+                <input type="number" placeholder="Enter Mobile Number">
+
+            </div>
+
+        </div>
+
+        <!-- EMAIL -->
+
+        <div class="form-group">
+
+            <label>Email Address :</label>
+
+            <input type="email" placeholder="Enter Email Address">
+
+        </div>
+
+        <!-- PASSWORD -->
+
+        <div class="form-group">
+
+            <label>Password :</label>
+
+            <input type="password" placeholder="Enter Password">
+
+        </div>
+
+        <!-- GENDER -->
+
+        <div class="form-group">
+
+            <label>Gender :</label>
+
+            <div class="radio-group">
+
+                <label>
+                    <input type="radio" name="gender">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender">
+                    Female
+                </label>
+
+            </div>
+
+        </div>
+
+        <!-- DEPARTMENT -->
+
+        <div class="form-group">
+
+            <label>Department :</label>
+
+            <div class="checkbox-group">
+
+                <label><input type="checkbox"> CSE</label>
+
+                <label><input type="checkbox"> EEE</label>
+
+                <label><input type="checkbox"> BBA</label>
+
+                <label><input type="checkbox"> Civil</label>
+
+                <label><input type="checkbox"> English</label>
+
+            </div>
+
+        </div>
+
+        <!-- COURSE -->
+
+        <div class="form-group">
+
+            <label>Current Course :</label>
+
+            <select>
+
+                <option>Select Course</option>
+
+                <option>Diploma</option>
+
+                <option>BSc</option>
+
+                <option>BBA</option>
+
+                <option>MBA</option>
+
+                <option>MSC</option>
+
+            </select>
+
+        </div>
+
+        <!-- PHOTO -->
+
+        <div class="form-group">
+
+            <label>Student Photo :</label>
+
+            <input type="file">
+
+        </div>
+
+        <!-- CITY -->
+
+        <div class="form-group">
+
+            <label>City :</label>
+
+            <input type="text" placeholder="Enter City Name">
+
+        </div>
+
+        <!-- ADDRESS -->
+
+        <div class="form-group">
+
+            <label>Address :</label>
+
+            <textarea placeholder="Enter Full Address"></textarea>
+
+        </div>
+
+        <!-- BUTTON -->
+
+        <div class="btn">
+
+            <button type="submit">
+                Register Now
+            </button>
+
+        </div>
+
+    </form>
+
+    <!-- FOOTER -->
+
+    <div class="footer">
+
+        © 2026 Student Registration System
+
+    </div>
+
+</div>
+
+</body>
+</html>
